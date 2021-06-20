@@ -19,6 +19,9 @@ def run():
     ]
     ]
 
+    # for i in super_list:
+    #     print(i)
+
     super_dict = {        #DICCIONARIOS QUE GUARDAN LISTAS
         'natural_nums': [1, 2, 3, 4, 5],
         'integer_nums': [-1, -2, 0, 1, 2],
