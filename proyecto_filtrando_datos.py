@@ -98,8 +98,42 @@ def run():
     #es mayor a 70 años y mandar True False.
 
     old_people = list(map(lambda i:{ **i, **{'old': i['age'] > 70}}, DATA ))
-    for i in old_people:
-        print(i)
+    # for i in old_people:
+    #     print(i)
+
+    ###############################################################################
+
+    #todos los trabajadores que trabajan en python con filter y map
+
+    all_python_devv = list(filter(lambda i : i['language'] == 'python', DATA))
+    all_python_devv = list(map(lambda i: i['name'] , all_python_devv))
+    # for i in all_python_devv:
+    #     print(i)
+
+    #############################################################################
+
+     #todos los trbajadores en platzy
+     
+    all_platzi_workerr = list(filter(lambda i: i['organization'] == 'Platzi', DATA))
+    all_platzi_workerr = list(map(lambda i: i['name'], all_platzi_workerr))
+    # for i in all_platzi_workerr:
+    #      print(i)
+
+    #############################################################################
+    #todos los adultos mayor a 18 años
+    adultss = [i['name'] for i in DATA if i['age'] > 18]    #list_comprehensions
+    # for i in adultss:
+    #     print(i)
+
+    #############################################################################
+
+    #crear una nueva lista de diccionarios , pero que el lugar tengamos una llave mas llamada 'old', para saber si la persona
+    #es mayor a 70 años y mandar True False.
+
+    oldd_people = [{**i, **{'oldd': i['age'] > 70}} for i in DATA]
+    for i in oldd_people:
+        # i = {**i, **{'oldd': i['age'] > 70}}
+        print(i) 
 
 
 
