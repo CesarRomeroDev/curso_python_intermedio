@@ -130,7 +130,7 @@ def run():
     #crear una nueva lista de diccionarios , pero que el lugar tengamos una llave mas llamada 'old', para saber si la persona
     #es mayor a 70 años y mandar True False.
 
-    oldd_people = [{**i, **{'oldd': i['age'] > 70}} for i in DATA]
+    oldd_people = [{**i, **{'oldd': i['age'] > 70}} for i in DATA]         #list_comprehensions
     for i in oldd_people:
         # i = {**i, **{'oldd': i['age'] > 70}}
         print(i) 
